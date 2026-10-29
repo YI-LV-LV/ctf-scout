@@ -25,7 +25,7 @@
 ## 快速开始
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/YI-LV-LV/ctf-scout.git
 cd ctf-scout
 
 # 直接运行

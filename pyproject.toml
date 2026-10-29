@@ -19,6 +19,9 @@ classifiers = [
 ]
 dependencies = []
 
+[project.urls]
+Repository = "https://github.com/YI-LV-LV/ctf-scout"
+
 [project.scripts]
 ctf-scout = "ctf_scout.cli:main"
 
