@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module ctf_scout.tools.checks</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="ctf_scout.html" class="white">ctf_scout</a>.<a href="ctf_scout.tools.html" class="white">tools</a>.checks</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cm1991%5Cdocuments%5Ctrae-cn%5Cdefault%5Cctf-scout%5Cctf_scout%5Ctools%5Cchecks.py">c:\users\m1991\documents\trae-cn\default\ctf-scout\ctf_scout\tools\checks.py</a></td></tr></table>
+    <p><span class="code">被动信息泄露检查与低风险主动验证。</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="re.html">re</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-active_checks"><strong>active_checks</strong></a>(web: WebTarget, timeout: float) -&gt; list[Finding]</dt><dd><span class="code">低风险主动验证，可能产生少量额外请求。</span></dd></dl>
+ <dl><dt><a name="-passive_checks"><strong>passive_checks</strong></a>(web: WebTarget, timeout: float) -&gt; list[Finding]</dt><dd><span class="code">不改变目标状态的检查。</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>FLAG_PATTERN</strong> = re.compile('(flag|ctf|nssctf|ctfhub|hgame|moectf...aictf|n1ctf)\\{[^}\\n]{1,120}\\}', re.IGNORECASE)<br>
+<strong>LFI_PARAMS</strong> = {'doc', 'download', 'file', 'filename', 'folder', 'inc', ...}<br>
+<strong>REDIRECT_PARAMS</strong> = {'dest', 'goto', 'link', 'next', 'redirect', 'return', ...}<br>
+<strong>SKIP_PARAMS</strong> = {'create', 'delete', 'destroy', 'logout', 'remove', 'reset', ...}<br>
+<strong>SQL_ERRORS</strong> = ('you have an error in your sql syntax', 'warning: mysql', 'unclosed quotation mark', 'sqlstate[', 'postgresql query failed', 'pg_query', 'sqlite error', 'ora-0', 'mysqli', 'syntax error', 'mysql_fetch')</td></tr></table>
+</body></html>

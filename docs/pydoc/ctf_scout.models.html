@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module ctf_scout.models</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="ctf_scout.html" class="white">ctf_scout</a>.models</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cm1991%5Cdocuments%5Ctrae-cn%5Cdefault%5Cctf-scout%5Cctf_scout%5Cmodels.py">c:\users\m1991\documents\trae-cn\default\ctf-scout\ctf_scout\models.py</a></td></tr></table>
+    <p><span class="code">核心数据结构。</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="re.html">re</a><br>
+</td><td class="multicolumn"><a href="time.html">time</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="ctf_scout.models.html#Context">Context</a>
+</dt><dt class="heading-text"><a href="ctf_scout.models.html#Finding">Finding</a>
+</dt><dt class="heading-text"><a href="ctf_scout.models.html#ServiceInfo">ServiceInfo</a>
+</dt><dt class="heading-text"><a href="ctf_scout.models.html#WebTarget">WebTarget</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Context">class <strong>Context</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Context">Context</a>(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;input_target:&nbsp;str,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;target_host:&nbsp;str,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;target_port:&nbsp;int,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;scheme:&nbsp;str,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;base_path:&nbsp;str,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;resolved_ip:&nbsp;str,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;is_private:&nbsp;bool,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;authorized:&nbsp;bool,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;options:&nbsp;dict[str,&nbsp;Any]&nbsp;=&nbsp;&amp;lt;factory&amp;gt;,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;open_ports:&nbsp;dict[int,&nbsp;<a href="#ServiceInfo">ServiceInfo</a>]&nbsp;=&nbsp;&amp;lt;factory&amp;gt;,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;web_targets:&nbsp;list[<a href="#WebTarget">WebTarget</a>]&nbsp;=&nbsp;&amp;lt;factory&amp;gt;,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;findings:&nbsp;list[<a href="#Finding">Finding</a>]&nbsp;=&nbsp;&amp;lt;factory&amp;gt;,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;discovered_paths:&nbsp;dict[str,&nbsp;str]&nbsp;=&nbsp;&amp;lt;factory&amp;gt;,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;robots_paths:&nbsp;list[str]&nbsp;=&nbsp;&amp;lt;factory&amp;gt;,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;attack_paths:&nbsp;list[str]&nbsp;=&nbsp;&amp;lt;factory&amp;gt;,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;commands:&nbsp;list[str]&nbsp;=&nbsp;&amp;lt;factory&amp;gt;,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ai_analysis:&nbsp;str&nbsp;=&nbsp;'',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;logs:&nbsp;list[str]&nbsp;=&nbsp;&amp;lt;factory&amp;gt;,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;started_at:&nbsp;float&nbsp;=&nbsp;&amp;lt;factory&amp;gt;,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;finished_at:&nbsp;float&nbsp;=&nbsp;0.0<br>
+)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+一次扫描的全局上下文，智能体各阶段共享。<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="Context-__eq__"><strong>__eq__</strong></a>(self, other)</dt><dd><span class="code">Return&nbsp;self==value.</span></dd></dl>
+
+<dl><dt><a name="Context-__init__"><strong>__init__</strong></a>(
+    self,
+    input_target: str,
+    target_host: str,
+    target_port: int,
+    scheme: str,
+    base_path: str,
+    resolved_ip: str,
+    is_private: bool,
+    authorized: bool,
+    options: dict[str, Any] = &lt;factory&gt;,
+    open_ports: dict[int, ServiceInfo] = &lt;factory&gt;,
+    web_targets: list[WebTarget] = &lt;factory&gt;,
+    findings: list[Finding] = &lt;factory&gt;,
+    discovered_paths: dict[str, str] = &lt;factory&gt;,
+    robots_paths: list[str] = &lt;factory&gt;,
+    attack_paths: list[str] = &lt;factory&gt;,
+    commands: list[str] = &lt;factory&gt;,
+    ai_analysis: str = '',
+    logs: list[str] = &lt;factory&gt;,
+    started_at: float = &lt;factory&gt;,
+    finished_at: float = 0.0
+) -&gt; None</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="Context-__replace__"><strong>__replace__</strong></a> = _replace(self, /, **changes)<span class="grey"><span class="heading-text"> from <a href="dataclasses.html">dataclasses</a></span></span></dt></dl>
+
+<dl><dt><a name="Context-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><span class="code">Return&nbsp;repr(self).</span></dd></dl>
+
+<dl><dt><a name="Context-add"><strong>add</strong></a>(self, finding: Finding) -&gt; bool</dt><dd><span class="code">按标题&nbsp;+&nbsp;目标去重；同标题同目标时合并更完整的证据。</span></dd></dl>
+
+<dl><dt><a name="Context-log"><strong>log</strong></a>(self, message: str, level: str = 'info') -&gt; None</dt></dl>
+
+<dl><dt><a name="Context-risk_score"><strong>risk_score</strong></a>(self) -&gt; int</dt></dl>
+
+<dl><dt><a name="Context-severity_counts"><strong>severity_counts</strong></a>(self) -&gt; dict[str, int]</dt></dl>
+
+<dl><dt><a name="Context-sorted_findings"><strong>sorted_findings</strong></a>(self) -&gt; list[Finding]</dt></dl>
+
+<dl><dt><a name="Context-to_dict"><strong>to_dict</strong></a>(self) -&gt; dict[str, Any]</dt></dl>
+
+<hr>
+Readonly properties defined here:<br>
+<dl><dt><strong>elapsed</strong></dt>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__annotations__</strong> = {'ai_analysis': 'str', 'attack_paths': 'list[str]', 'authorized': 'bool', 'base_path': 'str', 'commands': 'list[str]', 'discovered_paths': 'dict[str, str]', 'findings': 'list[Finding]', 'finished_at': 'float', 'input_target': 'str', 'is_private': 'bool', ...}</dl>
+
+<dl><dt><strong>__dataclass_fields__</strong> = {'ai_analysis': Field(name='ai_analysis',type='str',default='',d...xy({}),kw_only=False,doc=None,_field_type=_FIELD), 'attack_paths': Field(name='attack_paths',type='list[str]',defau...xy({}),kw_only=False,doc=None,_field_type=_FIELD), 'authorized': Field(name='authorized',type='bool',default=&lt;dat...xy({}),kw_only=False,doc=None,_field_type=_FIELD), 'base_path': Field(name='base_path',type='str',default=&lt;datac...xy({}),kw_only=False,doc=None,_field_type=_FIELD), 'commands': Field(name='commands',type='list[str]',default=&lt;...xy({}),kw_only=False,doc=None,_field_type=_FIELD), 'discovered_paths': Field(name='discovered_paths',type='dict[str, st...xy({}),kw_only=False,doc=None,_field_type=_FIELD), 'findings': Field(name='findings',type='list[Finding]',defau...xy({}),kw_only=False,doc=None,_field_type=_FIELD), 'finished_at': Field(name='finished_at',type='float',default=0....xy({}),kw_only=False,doc=None,_field_type=_FIELD), 'input_target': Field(name='input_target',type='str',default=&lt;da...xy({}),kw_only=False,doc=None,_field_type=_FIELD), 'is_private': Field(name='is_private',type='bool',default=&lt;dat...xy({}),kw_only=False,doc=None,_field_type=_FIELD), ...}</dl>
+
+<dl><dt><strong>__dataclass_params__</strong> = _DataclassParams(init=True,repr=True,eq=True,ord...rue,kw_only=False,slots=False,weakref_slot=False)</dl>
+
+<dl><dt><strong>__hash__</strong> = None</dl>
+
+<dl><dt><strong>__match_args__</strong> = ('input_target', 'target_host', 'target_port', 'scheme', 'base_path', 'resolved_ip', 'is_private', 'authorized', 'options', 'open_ports', 'web_targets', 'findings', 'discovered_paths', 'robots_paths', 'attack_paths', 'commands', 'ai_analysis', 'logs', 'started_at', 'finished_at')</dl>
+
+<dl><dt><strong>ai_analysis</strong> = ''</dl>
+
+<dl><dt><strong>finished_at</strong> = 0.0</dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Finding">class <strong>Finding</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Finding">Finding</a>(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;title:&nbsp;str,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;severity:&nbsp;str,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;category:&nbsp;str,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;target:&nbsp;str,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;evidence:&nbsp;str,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;suggestion:&nbsp;str&nbsp;=&nbsp;'',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ctf_hint:&nbsp;str&nbsp;=&nbsp;'',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tags:&nbsp;list[str]&nbsp;=&nbsp;&amp;lt;factory&amp;gt;<br>
+)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+一条侦察发现。<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="Finding-__eq__"><strong>__eq__</strong></a>(self, other)</dt><dd><span class="code">Return&nbsp;self==value.</span></dd></dl>
+
+<dl><dt><a name="Finding-__init__"><strong>__init__</strong></a>(
+    self,
+    title: str,
+    severity: str,
+    category: str,
+    target: str,
+    evidence: str,
+    suggestion: str = '',
+    ctf_hint: str = '',
+    tags: list[str] = &lt;factory&gt;
+) -&gt; None</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="Finding-__replace__"><strong>__replace__</strong></a> = _replace(self, /, **changes)<span class="grey"><span class="heading-text"> from <a href="dataclasses.html">dataclasses</a></span></span></dt></dl>
+
+<dl><dt><a name="Finding-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><span class="code">Return&nbsp;repr(self).</span></dd></dl>
+
+<dl><dt><a name="Finding-to_dict"><strong>to_dict</strong></a>(self) -&gt; dict[str, Any]</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__annotations__</strong> = {'category': 'str', 'ctf_hint': 'str', 'evidence': 'str', 'severity': 'str', 'suggestion': 'str', 'tags': 'list[str]', 'target': 'str', 'title': 'str'}</dl>
+
+<dl><dt><strong>__dataclass_fields__</strong> = {'category': Field(name='category',type='str',default=&lt;datacl...xy({}),kw_only=False,doc=None,_field_type=_FIELD), 'ctf_hint': Field(name='ctf_hint',type='str',default='',defa...xy({}),kw_only=False,doc=None,_field_type=_FIELD), 'evidence': Field(name='evidence',type='str',default=&lt;datacl...xy({}),kw_only=False,doc=None,_field_type=_FIELD), 'severity': Field(name='severity',type='str',default=&lt;datacl...xy({}),kw_only=False,doc=None,_field_type=_FIELD), 'suggestion': Field(name='suggestion',type='str',default='',de...xy({}),kw_only=False,doc=None,_field_type=_FIELD), 'tags': Field(name='tags',type='list[str]',default=&lt;data...xy({}),kw_only=False,doc=None,_field_type=_FIELD), 'target': Field(name='target',type='str',default=&lt;dataclas...xy({}),kw_only=False,doc=None,_field_type=_FIELD), 'title': Field(name='title',type='str',default=&lt;dataclass...xy({}),kw_only=False,doc=None,_field_type=_FIELD)}</dl>
+
+<dl><dt><strong>__dataclass_params__</strong> = _DataclassParams(init=True,repr=True,eq=True,ord...rue,kw_only=False,slots=False,weakref_slot=False)</dl>
+
+<dl><dt><strong>__hash__</strong> = None</dl>
+
+<dl><dt><strong>__match_args__</strong> = ('title', 'severity', 'category', 'target', 'evidence', 'suggestion', 'ctf_hint', 'tags')</dl>
+
+<dl><dt><strong>ctf_hint</strong> = ''</dl>
+
+<dl><dt><strong>suggestion</strong> = ''</dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="ServiceInfo">class <strong>ServiceInfo</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#ServiceInfo">ServiceInfo</a>(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;port:&nbsp;int,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;service:&nbsp;str&nbsp;=&nbsp;'unknown',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;banner:&nbsp;str&nbsp;=&nbsp;'',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;product:&nbsp;str&nbsp;=&nbsp;'',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;is_http:&nbsp;bool&nbsp;=&nbsp;False,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;scheme:&nbsp;str&nbsp;=&nbsp;''<br>
+)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+一个开放端口及其指纹。<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="ServiceInfo-__eq__"><strong>__eq__</strong></a>(self, other)</dt><dd><span class="code">Return&nbsp;self==value.</span></dd></dl>
+
+<dl><dt><a name="ServiceInfo-__init__"><strong>__init__</strong></a>(
+    self,
+    port: int,
+    service: str = 'unknown',
+    banner: str = '',
+    product: str = '',
+    is_http: bool = False,
+    scheme: str = ''
+) -&gt; None</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="ServiceInfo-__replace__"><strong>__replace__</strong></a> = _replace(self, /, **changes)<span class="grey"><span class="heading-text"> from <a href="dataclasses.html">dataclasses</a></span></span></dt></dl>
+
+<dl><dt><a name="ServiceInfo-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><span class="code">Return&nbsp;repr(self).</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__annotations__</strong> = {'banner': 'str', 'is_http': 'bool', 'port': 'int', 'product': 'str', 'scheme': 'str', 'service': 'str'}</dl>
+
+<dl><dt><strong>__dataclass_fields__</strong> = {'banner': Field(name='banner',type='str',default='',defaul...xy({}),kw_only=False,doc=None,_field_type=_FIELD), 'is_http': Field(name='is_http',type='bool',default=False,d...xy({}),kw_only=False,doc=None,_field_type=_FIELD), 'port': Field(name='port',type='int',default=&lt;dataclasse...xy({}),kw_only=False,doc=None,_field_type=_FIELD), 'product': Field(name='product',type='str',default='',defau...xy({}),kw_only=False,doc=None,_field_type=_FIELD), 'scheme': Field(name='scheme',type='str',default='',defaul...xy({}),kw_only=False,doc=None,_field_type=_FIELD), 'service': Field(name='service',type='str',default='unknown...xy({}),kw_only=False,doc=None,_field_type=_FIELD)}</dl>
+
+<dl><dt><strong>__dataclass_params__</strong> = _DataclassParams(init=True,repr=True,eq=True,ord...rue,kw_only=False,slots=False,weakref_slot=False)</dl>
+
+<dl><dt><strong>__hash__</strong> = None</dl>
+
+<dl><dt><strong>__match_args__</strong> = ('port', 'service', 'banner', 'product', 'is_http', 'scheme')</dl>
+
+<dl><dt><strong>banner</strong> = ''</dl>
+
+<dl><dt><strong>is_http</strong> = False</dl>
+
+<dl><dt><strong>product</strong> = ''</dl>
+
+<dl><dt><strong>scheme</strong> = ''</dl>
+
+<dl><dt><strong>service</strong> = 'unknown'</dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="WebTarget">class <strong>WebTarget</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#WebTarget">WebTarget</a>(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;url:&nbsp;str,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;scheme:&nbsp;str,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;host:&nbsp;str,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;port:&nbsp;int,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;status:&nbsp;int&nbsp;=&nbsp;0,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;final_url:&nbsp;str&nbsp;=&nbsp;'',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;headers:&nbsp;dict[str,&nbsp;str]&nbsp;=&nbsp;&amp;lt;factory&amp;gt;,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cookies:&nbsp;list[str]&nbsp;=&nbsp;&amp;lt;factory&amp;gt;,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;title:&nbsp;str&nbsp;=&nbsp;'',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;body:&nbsp;str&nbsp;=&nbsp;'',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;body_len:&nbsp;int&nbsp;=&nbsp;0,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;technologies:&nbsp;list[str]&nbsp;=&nbsp;&amp;lt;factory&amp;gt;,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;meta_generator:&nbsp;list[str]&nbsp;=&nbsp;&amp;lt;factory&amp;gt;,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;forms:&nbsp;list[dict[str,&nbsp;Any]]&nbsp;=&nbsp;&amp;lt;factory&amp;gt;,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;links:&nbsp;list[str]&nbsp;=&nbsp;&amp;lt;factory&amp;gt;,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;scripts:&nbsp;list[str]&nbsp;=&nbsp;&amp;lt;factory&amp;gt;,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;comments:&nbsp;list[str]&nbsp;=&nbsp;&amp;lt;factory&amp;gt;,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;baseline_404_len:&nbsp;int&nbsp;=&nbsp;-1,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;skip_enum:&nbsp;bool&nbsp;=&nbsp;False<br>
+)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+一个&nbsp;Web&nbsp;入口的探测结果。<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="WebTarget-__eq__"><strong>__eq__</strong></a>(self, other)</dt><dd><span class="code">Return&nbsp;self==value.</span></dd></dl>
+
+<dl><dt><a name="WebTarget-__init__"><strong>__init__</strong></a>(
+    self,
+    url: str,
+    scheme: str,
+    host: str,
+    port: int,
+    status: int = 0,
+    final_url: str = '',
+    headers: dict[str, str] = &lt;factory&gt;,
+    cookies: list[str] = &lt;factory&gt;,
+    title: str = '',
+    body: str = '',
+    body_len: int = 0,
+    technologies: list[str] = &lt;factory&gt;,
+    meta_generator: list[str] = &lt;factory&gt;,
+    forms: list[dict[str, Any]] = &lt;factory&gt;,
+    links: list[str] = &lt;factory&gt;,
+    scripts: list[str] = &lt;factory&gt;,
+    comments: list[str] = &lt;factory&gt;,
+    baseline_404_len: int = -1,
+    skip_enum: bool = False
+) -&gt; None</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="WebTarget-__replace__"><strong>__replace__</strong></a> = _replace(self, /, **changes)<span class="grey"><span class="heading-text"> from <a href="dataclasses.html">dataclasses</a></span></span></dt></dl>
+
+<dl><dt><a name="WebTarget-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><span class="code">Return&nbsp;repr(self).</span></dd></dl>
+
+<hr>
+Readonly properties defined here:<br>
+<dl><dt><strong>base_url</strong></dt>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__annotations__</strong> = {'baseline_404_len': 'int', 'body': 'str', 'body_len': 'int', 'comments': 'list[str]', 'cookies': 'list[str]', 'final_url': 'str', 'forms': 'list[dict[str, Any]]', 'headers': 'dict[str, str]', 'host': 'str', 'links': 'list[str]', ...}</dl>
+
+<dl><dt><strong>__dataclass_fields__</strong> = {'baseline_404_len': Field(name='baseline_404_len',type='int',default...xy({}),kw_only=False,doc=None,_field_type=_FIELD), 'body': Field(name='body',type='str',default='',default_...xy({}),kw_only=False,doc=None,_field_type=_FIELD), 'body_len': Field(name='body_len',type='int',default=0,defau...xy({}),kw_only=False,doc=None,_field_type=_FIELD), 'comments': Field(name='comments',type='list[str]',default=&lt;...xy({}),kw_only=False,doc=None,_field_type=_FIELD), 'cookies': Field(name='cookies',type='list[str]',default=&lt;d...xy({}),kw_only=False,doc=None,_field_type=_FIELD), 'final_url': Field(name='final_url',type='str',default='',def...xy({}),kw_only=False,doc=None,_field_type=_FIELD), 'forms': Field(name='forms',type='list[dict[str, Any]]',d...xy({}),kw_only=False,doc=None,_field_type=_FIELD), 'headers': Field(name='headers',type='dict[str, str]',defau...xy({}),kw_only=False,doc=None,_field_type=_FIELD), 'host': Field(name='host',type='str',default=&lt;dataclasse...xy({}),kw_only=False,doc=None,_field_type=_FIELD), 'links': Field(name='links',type='list[str]',default=&lt;dat...xy({}),kw_only=False,doc=None,_field_type=_FIELD), ...}</dl>
+
+<dl><dt><strong>__dataclass_params__</strong> = _DataclassParams(init=True,repr=True,eq=True,ord...rue,kw_only=False,slots=False,weakref_slot=False)</dl>
+
+<dl><dt><strong>__hash__</strong> = None</dl>
+
+<dl><dt><strong>__match_args__</strong> = ('url', 'scheme', 'host', 'port', 'status', 'final_url', 'headers', 'cookies', 'title', 'body', 'body_len', 'technologies', 'meta_generator', 'forms', 'links', 'scripts', 'comments', 'baseline_404_len', 'skip_enum')</dl>
+
+<dl><dt><strong>baseline_404_len</strong> = -1</dl>
+
+<dl><dt><strong>body</strong> = ''</dl>
+
+<dl><dt><strong>body_len</strong> = 0</dl>
+
+<dl><dt><strong>final_url</strong> = ''</dl>
+
+<dl><dt><strong>skip_enum</strong> = False</dl>
+
+<dl><dt><strong>status</strong> = 0</dl>
+
+<dl><dt><strong>title</strong> = ''</dl>
+
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>SEVERITY_LABEL</strong> = {'critical': '严重', 'high': '高危', 'info': '信息', 'low': '低危', 'medium': '中危'}<br>
+<strong>SEVERITY_ORDER</strong> = {'critical': 0, 'high': 1, 'info': 4, 'low': 3, 'medium': 2}<br>
+<strong>SEVERITY_WEIGHT</strong> = {'critical': 50, 'high': 20, 'info': 0, 'low': 2, 'medium': 8}</td></tr></table>
+</body></html>

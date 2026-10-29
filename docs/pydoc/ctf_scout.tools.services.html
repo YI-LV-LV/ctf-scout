@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module ctf_scout.tools.services</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="ctf_scout.html" class="white">ctf_scout</a>.<a href="ctf_scout.tools.html" class="white">tools</a>.services</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cm1991%5Cdocuments%5Ctrae-cn%5Cdefault%5Cctf-scout%5Cctf_scout%5Ctools%5Cservices.py">c:\users\m1991\documents\trae-cn\default\ctf-scout\ctf_scout\tools\services.py</a></td></tr></table>
+    <p><span class="code">非&nbsp;Web&nbsp;服务的指纹提示与未授权访问验证。</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="ftplib.html">ftplib</a><br>
+</td><td class="multicolumn"><a href="json.html">json</a><br>
+</td><td class="multicolumn"><a href="socket.html">socket</a><br>
+</td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-active_service_checks"><strong>active_service_checks</strong></a>(ctx: Context, timeout: float) -&gt; list[Finding]</dt><dd><span class="code">只做读取类验证，不执行写入或破坏性命令。</span></dd></dl>
+ <dl><dt><a name="-passive_service_findings"><strong>passive_service_findings</strong></a>(ctx: Context) -&gt; list[Finding]</dt></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>SERVICE_HINTS</strong> = {21: ('FTP 服务暴露', 'info', '尝试匿名登录：ftp &lt;host&gt; &lt;port&gt;；或 nmap --script ftp-anon。'), 22: ('SSH 服务暴露', 'info', '使用 ssh-audit 检查加密套件；确认版本是否存在已知漏洞。'), 23: ('Telnet 服务暴露', 'medium', 'Telnet 明文传输，尝试连接并观察登录提示与默认口令。'), 25: ('SMTP 服务暴露', 'info', '尝试 VRFY/EXPN 枚举用户，或 smtp-user-enum。'), 139: ('NetBIOS 服务暴露', 'info', '使用 enum4linux-ng 枚举共享、用户与域信息。'), 445: ('SMB 服务暴露', 'info', '使用 smbclient -L 与 enum4linux-ng 检查匿名共享与弱口令。'), 1433: ('MSSQL 服务暴露', 'info', '确认是否允许弱口令登录；检查 xp_cmdshell 是否开启。'), 1521: ('Oracle 服务暴露', 'info', '检查默认账号与 TNS 监听器信息泄露。'), 2375: ('Docker API 端口开放', 'high', '确认是否未授权：curl http://&lt;host&gt;:&lt;port&gt;/version。'), 2376: ('Docker TLS API 端口开放', 'medium', '检查客户端证书是否可绕过或存在默认证书。'), ...}</td></tr></table>
+</body></html>

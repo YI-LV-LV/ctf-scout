@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module ctf_scout.wordlists</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="ctf_scout.html" class="white">ctf_scout</a>.wordlists</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cm1991%5Cdocuments%5Ctrae-cn%5Cdefault%5Cctf-scout%5Cctf_scout%5Cwordlists.py">c:\users\m1991\documents\trae-cn\default\ctf-scout\ctf_scout\wordlists.py</a></td></tr></table>
+    <p><span class="code">内置敏感路径字典。值:&nbsp;(命中时的基础严重度,&nbsp;标题,&nbsp;CTF&nbsp;利用思路)。</span></p>
+<p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-__annotate__"><strong>__annotate__</strong></a>(format, /)</dt></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>PATHS</strong> = {'.DS_Store': ('low', '.DS_Store 文件泄露', '解析目录结构，发现隐藏文件与上传文件名。'), '.env': ('critical', '环境变量文件 .env 暴露', '读取数据库口令、API Key、APP_KEY；Laravel 的 APP_KEY 可进一步伪造会话或反序列化。'), '.env.bak': ('high', '.env 备份文件暴露', '尝试读取旧版配置中的数据库与密钥信息。'), '.git/HEAD': ('high', 'Git 仓库 HEAD 文件暴露', '确认 .git 目录可访问后，用 git-dumper 还原整个仓库。'), '.git/config': ('high', 'Git 仓库配置文件暴露', '使用 git-dumper 还原源码，审计历史提交中的硬编码凭据、flag 与过滤逻辑。'), '.svn/entries': ('high', 'SVN 元数据泄露', '尝试 svn-dump 或直接访问 .svn 下的原始文件获取源码。'), '.well-known/security.txt': ('info', 'security.txt 可访问', '获取安全联系人信息，确认测试范围。'), 'README.md': ('info', 'README 文件暴露', '阅读部署说明，可能包含默认账号、路径与版本信息。'), 'WEB-INF/web.xml': ('high', 'WEB-INF 描述符暴露', '结合目录穿越读取 classes 与 lib，进一步反编译审计。'), 'actuator': ('medium', 'Spring Boot Actuator 端点暴露', '访问 /actuator/env、/actuator/heapdump 获取配置与内存中的凭据。'), ...}<br>
+<strong>SNIPPET_PATHS</strong> = {'.env', '.env.bak', '.git/config', 'README.md', 'config.php', 'config.php.bak', ...}<br>
+<strong>__conditional_annotations__</strong> = {0}</td></tr></table>
+</body></html>

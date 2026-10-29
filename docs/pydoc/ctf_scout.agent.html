@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module ctf_scout.agent</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="ctf_scout.html" class="white">ctf_scout</a>.agent</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cm1991%5Cdocuments%5Ctrae-cn%5Cdefault%5Cctf-scout%5Cctf_scout%5Cagent.py">c:\users\m1991\documents\trae-cn\default\ctf-scout\ctf_scout\agent.py</a></td></tr></table>
+    <p><span class="code">侦察智能体：规划&nbsp;-&gt;&nbsp;执行&nbsp;-&gt;&nbsp;根据结果追加任务&nbsp;-&gt;&nbsp;分析。</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="ctf_scout.tools.checks.html">ctf_scout.tools.checks</a><br>
+<a href="ctf_scout.tools.recon.html">ctf_scout.tools.recon</a><br>
+</td><td class="multicolumn"><a href="ctf_scout.tools.services.html">ctf_scout.tools.services</a><br>
+<a href="time.html">time</a><br>
+</td><td class="multicolumn"><a href="ctf_scout.tools.web.html">ctf_scout.tools.web</a><br>
+</td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="ctf_scout.agent.html#Agent">Agent</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Agent">class <strong>Agent</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Agent">Agent</a>(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ctx:&nbsp;Context,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;progress:&nbsp;Callable[[str],&nbsp;None]&nbsp;|&nbsp;None&nbsp;=&nbsp;None,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;max_steps:&nbsp;int&nbsp;=&nbsp;1000<br>
+)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+一个基于任务队列的轻量智能体。<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="Agent-__init__"><strong>__init__</strong></a>(
+    self,
+    ctx: Context,
+    progress: Callable[[str], None] | None = None,
+    max_steps: int = 1000
+) -&gt; None</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="Agent-enqueue"><strong>enqueue</strong></a>(self, kind: str, payload: object = None) -&gt; None</dt></dl>
+
+<dl><dt><a name="Agent-run"><strong>run</strong></a>(self) -&gt; None</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>Callable</strong> = typing.Callable<br>
+<strong>TASK_LABELS</strong> = {'active': '主动验证', 'enum': '敏感路径枚举', 'http_probe': 'Web 入口探测', 'passive': '被动信息泄露检查', 'port_scan': '端口扫描', 'robots': '跟进 robots.txt 路径', 'service_probe': '服务识别', 'tech': '技术栈定向检查'}</td></tr></table>
+</body></html>

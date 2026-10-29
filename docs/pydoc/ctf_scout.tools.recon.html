@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module ctf_scout.tools.recon</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="ctf_scout.html" class="white">ctf_scout</a>.<a href="ctf_scout.tools.html" class="white">tools</a>.recon</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cm1991%5Cdocuments%5Ctrae-cn%5Cdefault%5Cctf-scout%5Cctf_scout%5Ctools%5Crecon.py">c:\users\m1991\documents\trae-cn\default\ctf-scout\ctf_scout\tools\recon.py</a></td></tr></table>
+    <p><span class="code">端口扫描与服务指纹。</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="re.html">re</a><br>
+</td><td class="multicolumn"><a href="socket.html">socket</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-guess_service"><strong>guess_service</strong></a>(port: int) -&gt; str</dt></dl>
+ <dl><dt><a name="-probe_service"><strong>probe_service</strong></a>(host: str, port: int, timeout: float = 1.2) -&gt; ServiceInfo</dt><dd><span class="code">连接端口并抓取&nbsp;Banner，判断是否为&nbsp;HTTP&nbsp;服务。</span></dd></dl>
+ <dl><dt><a name="-scan_ports"><strong>scan_ports</strong></a>(
+    host: str,
+    ports: list[int],
+    timeout: float = 0.7,
+    workers: int = 200,
+    progress=None
+) -&gt; list[int]</dt><dd><span class="code">TCP&nbsp;connect&nbsp;扫描。</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>COMMON_PORTS</strong> = [21, 22, 23, 25, 53, 80, 81, 88, 110, 111, 135, 139, 143, 443, 445, 993, 995, 1433, 1521, 2049, ...]<br>
+<strong>HTTPS_PORTS</strong> = {443, 7002, 8443, 9443}<br>
+<strong>HTTP_PORTS</strong> = {80, 81, 88, 3000, 4444, 5000, ...}<br>
+<strong>PORT_SERVICES</strong> = {20: 'ftp-data', 21: 'ftp', 22: 'ssh', 23: 'telnet', 25: 'smtp', 53: 'dns', 80: 'http', 81: 'http', 88: 'http', 110: 'pop3', ...}<br>
+<strong>PRODUCT_PATTERNS</strong> = [(r'OpenSSH[_\s-]*([\w.]+)?', 'OpenSSH'), (r'Apache/([\w.]+)', 'Apache'), (r'nginx/([\w.]+)', 'nginx'), (r'openresty/([\w.]+)', 'OpenResty'), (r'Microsoft-IIS/([\w.]+)', 'Microsoft-IIS'), (r'vsftpd[_\s-]*([\w.]+)?', 'vsftpd'), ('Pure-FTPd', 'Pure-FTPd'), (r'ProFTPD[_\s-]*([\w.]+)?', 'ProFTPD'), (r'MySQL[_\s-]*([\w.]+)?', 'MySQL'), ('MariaDB', 'MariaDB'), ('PostgreSQL', 'PostgreSQL'), ('Redis', 'Redis'), ('MongoDB', 'MongoDB'), (r'Tomcat/([\w.]+)', 'Tomcat'), ('Jenkins', 'Jenkins'), ('WebLogic', 'WebLogic'), ('RabbitMQ', 'RabbitMQ')]</td></tr></table>
+</body></html>

@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ctf-scout"
+version = "0.1.0"
+description = "An autonomous reconnaissance agent for authorized CTF competitions and lab environments."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "ctf-scout contributors" }]
+keywords = ["ctf", "security", "recon", "scanner", "penetration-testing"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Security",
+]
+dependencies = []
+
+[project.scripts]
+ctf-scout = "ctf_scout.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["ctf_scout*"]
