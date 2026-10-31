@@ -121,6 +121,9 @@ class Agent:
         if info.is_http or port in recon.HTTP_PORTS or port in recon.HTTPS_PORTS:
             scheme = info.scheme or ("https" if port in recon.HTTPS_PORTS else "http")
             self.enqueue("http_probe", (scheme, port))
+        elif info.service == "unknown":
+            # 未知端口可能是自定义端口上的 Web 应用，先尝试一次 HTTP 探测
+            self.enqueue("http_probe", (info.scheme or "http", port))
 
     def _task_http_probe(self, payload: object) -> None:
         scheme, port = payload  # type: ignore[misc]
